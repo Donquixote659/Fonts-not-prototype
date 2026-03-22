@@ -67,7 +67,7 @@ export default async function handler(req, res) {
         if (item.content.includes(term)) score += 5.0; 
       });
       const itemSubsets = item.subsets || [];
-      if (isKoreanQuery && itemSubsets.includes("korean")) score += 2.0;
+      if (isKoreanQuery && itemSubsets.includes("korean")) score += 20.0;
       return { ...item, finalScore: score };
     });
 
